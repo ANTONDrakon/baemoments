@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Discover 2026's hottest prom dresses, wedding guest outfits, bridesmaid dresses, gala gowns & formal wear. Shop trending evening dresses for every special occasion.">
+    <meta name="keywords" content="prom dresses 2026, wedding guest dress, bridesmaid dress, gala dress, red carpet dress, birthday outfit women, graduation dress, formal event outfit, evening dresses, formal gowns">
+    <meta name="author" content="Bae Moments Collection">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="2026 Formal Dress Collection | Prom, Wedding, Gala & More">
+    <meta property="og:description" content="Shop the hottest evening dresses for prom, weddings, galas & special events. Trending styles for every occasion.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=1200&q=80">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2026 Formal Dress Collection | Prom, Wedding, Gala & More">
+    <meta name="twitter:description" content="Shop the hottest evening dresses for prom, weddings, galas & special events.">
+    
+    <title>2026 Formal Dress Collection | Prom, Wedding Guest, Bridesmaid & Gala Dresses</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
+    
+    <!-- Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --color-black: #0a0a0a;
+            --color-charcoal: #1a1a1a;
+            --color-white: #ffffff;
+            --color-gold: #d4af37;
+            --color-gold-light: #f3e5ab;
+            --color-rose: #e0bfb8;
+            --color-burgundy: #800020;
+            --color-bg: #faf9f6; /* Off-white premium */
+            --color-text: #333333;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+            --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.3);
+            
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        
+        html { scroll-behavior: smooth; font-size: 16px; }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        img { max-width: 100%; height: auto; display: block; }
+        ul { list-style: none; }
+
+        /* --- UTILITIES & ANIMATIONS --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -1000px 0; }
+            100% { background-position: 1000px 0; }
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
+        .animate-on-scroll { opacity: 0; animation: none; }
+        .animate-on-scroll.visible { animation: fadeInUp 0.8s ease forwards; }
+
+        /* --- HEADER --- */
+        .header {
+            background: linear-gradient(135deg, var(--color-black) 0%, var(--color-charcoal) 100%);
+            color: var(--color-white);
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGNpcmNsZSBjeD0iMSIgY3k9IjEiIHI9IjEiIGZpbGw9InJnYmEoMjU1LDI1NSwyNTUsMC4wNSkiLz48L3N2Zz4=');
+            opacity: 0.3;
+        }
+
+        .header-logo {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, var(--color-white), var(--color-gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-tagline {
+            font-size: 1rem;
+            opacity: 0.8;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-cta {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--color-gold), #b59020);
+            color: var(--color-black);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-gold);
+            position: relative;
+            z-index: 1;
+            animation: pulse-glow 2s infinite;
+        }
+        
+        .header-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
+        }
+
+        /* --- NAVIGATION --- */
+        .nav-categories {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 1rem;
+            padding: 0 1.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        .nav-list::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+        
+        .nav-item a {
+            display: block;
+            padding: 0.6rem 1.5rem;
+            background: var(--color-bg);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--color-text);
+            white-space: nowrap;
+            transition: var(--transition);
+        }
+        
+        .nav-item a:hover, .nav-item a.active {
+            background: var(--color-black);
+            color: var(--color-white);
+            border-color: var(--color-black);
+            transform: translateY(-2px);
+        }
+
+        /* --- SECTIONS --- */
+        .section { padding: 4rem 0; border-bottom: 1px solid rgba(0,0,0,0.03); }
+        
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-black);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* --- PRODUCT GRID --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .section-title { font-size: 2rem; }
+            .header-logo { font-size: 2rem; }
+        }
+        
+        @media (max-width: 480px) {
+            .product-grid { grid-template-columns: 1fr; }
+        }
+
+        /* --- PRODUCT CARD --- */
+        .product-card {
+            background: var(--color-white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            group: card;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #f0f0f0;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .product-card:hover .product-image { transform: scale(1.08); }
+        
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: var(--color-black);
+            color: var(--color-gold);
+            padding: 0.4rem 0.8rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        
+        .product-badge.sale { background: var(--color-burgundy); color: white; }
+        .product-badge.new { background: var(--color-gold); color: black; }
+
+        .product-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+        
+        .product-card:hover .product-overlay { opacity: 1; }
+        
+        .product-quick-view {
+            background: var(--color-white);
+            color: var(--color-black);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            transform: translateY(20px);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover .product-quick-view { transform: translateY(0); }
+        
+        .product-info { padding: 1.5rem; text-align: center; }
+        
+        .product-category {
+            font-size: 0.75rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-name {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--color-black);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--color-burgundy);
+            margin-bottom: 1rem;
+        }
+        
+        .product-price .original {
+            font-size: 0.9rem;
+            color: #aaa;
+            text-decoration: line-through;
+            margin-left: 0.5rem;
+            font-weight: 400;
+        }
+
+        /* --- BOTTOM CTA --- */
+        .bottom-cta {
+            background: linear-gradient(135deg, var(--color-black) 0%, #2c2c2c 100%);
+            color: var(--color-white);
+            padding: 5rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bottom-cta::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .bottom-cta-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold-light);
+        }
+        
+        .bottom-cta-text {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .bottom-cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+        
+        .bottom-cta-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        
+        .bottom-cta-btn.primary {
+            background: var(--color-gold);
+            color: var(--color-black);
+        }
+        
+        .bottom-cta-btn.primary:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+        
+        .bottom-cta-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--color-white);
+            color: var(--color-white);
+        }
+        
+        .bottom-cta-btn.secondary:hover {
+            background: var(--color-white);
+            color: var(--color-black);
+            transform: translateY(-3px);
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background: var(--color-black);
+            color: #888;
+            padding: 3rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-link:hover { color: var(--color-gold); }
+        
+        /* --- SCROLL TOP --- */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 50px;
+            height: 50px;
+            background: var(--color-gold);
+            color: var(--color-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-gold);
+        }
+        
+        .scroll-top.visible { opacity: 1; visibility: visible; }
+        .scroll-top:hover { transform: translateY(-5px); }
+
+        /* --- URGENCY BANNER --- */
+        .urgency-banner {
+            background: var(--color-burgundy);
+            color: white;
+            text-align: center;
+            padding: 0.6rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    </style>
+    
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "2026 Formal Dress Collection",
+        "description": "Discover trending prom dresses, wedding guest outfits, bridesmaid dresses, gala gowns and formal wear for every special occasion in 2026.",
+        "url": "https://baemoments.com",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Red Ballgown Prom Dress"},
+                {"@type": "ListItem", "position": 2, "name": "Black Sequin Mermaid Gown"}
+            ]
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        🔥 FLASH SALE: Up to 70% OFF - Limited Time Only! 🔥
+    </div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-logo">✨ Bae Moments</div>
+        <p class="header-tagline">Your Destination for 2026's Hottest Formal Dresses</p>
+        <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="header-cta" onclick="trackClick('header_cta')">Shop Collection</a>
+    </header>
+    
+    <!-- Navigation -->
+    <nav class="nav-categories">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#prom">Prom Dresses</a></li>
+            <li class="nav-item"><a href="#wedding-guest">Wedding Guest</a></li>
+            <li class="nav-item"><a href="#bridesmaid">Bridesmaid</a></li>
+            <li class="nav-item"><a href="#gala">Gala Dresses</a></li>
+            <li class="nav-item"><a href="#red-carpet">Red Carpet</a></li>
+            <li class="nav-item"><a href="#birthday">Birthday</a></li>
+            <li class="nav-item"><a href="#graduation">Graduation</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Prom Dresses Section -->
+        <section id="prom" class="section animate-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">Prom Dresses 2026</h2>
+                <p class="section-subtitle">Stunning gowns for your unforgettable night</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_1')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80" alt="Red Ballgown Prom Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Bestseller</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Prom Dresses</p>
+                        <h3 class="product-name">Red Ballgown Prom Dress with Beaded Bodice</h3>
+                        <p class="product-price">$189.99 <span class="original">$379.99</span></p>
+                    </div>
+                </a>
+                
+                <!-- Product 2 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_2')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80" alt="Black Sequin Mermaid Prom Dress" class="product-image" loading="lazy">
+                        <span class="product-badge new">Trending</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Prom Dresses</p>
+                        <h3 class="product-name">Black Sequin Mermaid Prom Dress</h3>
+                        <p class="product-price">$219.99 <span class="original">$439.99</span></p>
+                    </div>
+                </a>
+
+                <!-- Product 3 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_3')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80" alt="White Lace A-Line Prom Dress" class="product-image" loading="lazy">
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Prom Dresses</p>
+                        <h3 class="product-name">White Lace A-Line Prom Dress</h3>
+                        <p class="product-price">$169.99 <span class="original">$339.99</span></p>
+                    </div>
+                </a>
+
+                <!-- Product 4 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_4')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80" alt="Emerald Green Two-Piece Prom Set" class="product-image" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Prom Dresses</p>
+                        <h3 class="product-name">Emerald Green Two-Piece Prom Set</h3>
+                        <p class="product-price">$149.99 <span class="original">$299.99</span></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Wedding Guest Section -->
+        <section id="wedding-guest" class="section animate-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">Wedding Guest Dresses</h2>
+                <p class="section-subtitle">Elegant outfits for every wedding celebration</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 5 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_1')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80" alt="Floral Midi Wedding Guest Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Bestseller</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Wedding Guest</p>
+                        <h3 class="product-name">Floral Midi Wedding Guest Dress with Lace</h3>
+                        <p class="product-price">$129.99 <span class="original">$259.99</span></p>
+                    </div>
+                </a>
+                
+                <!-- Product 6 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_2')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80" alt="Sage Green Maxi Wedding Guest Dress" class="product-image" loading="lazy">
+                        <span class="product-badge new">Trending</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Wedding Guest</p>
+                        <h3 class="product-name">Sage Green Maxi Wedding Guest Dress</h3>
+                        <p class="product-price">$149.99 <span class="original">$299.99</span></p>
+                    </div>
+                </a>
+                 <!-- Product 7 -->
+                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_3')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80" alt="Burgundy Satin Off-Shoulder Wedding Dress" class="product-image" loading="lazy">
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Wedding Guest</p>
+                        <h3 class="product-name">Burgundy Satin Off-Shoulder Wedding Dress</h3>
+                        <p class="product-price">$139.99 <span class="original">$279.99</span></p>
+                    </div>
+                </a>
+                 <!-- Product 8 -->
+                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_4')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80" alt="Navy Blue Lace Cocktail Wedding Dress" class="product-image" loading="lazy">
+                        <span class="product-badge new">New</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Wedding Guest</p>
+                        <h3 class="product-name">Navy Blue Lace Cocktail Wedding Dress</h3>
+                        <p class="product-price">$119.99 <span class="original">$239.99</span></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Bridesmaid Section -->
+        <section id="bridesmaid" class="section animate-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">Bridesmaid Dresses</h2>
+                <p class="section-subtitle">Beautiful dresses for your bridal party</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 9 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_1')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80" alt="Dusty Rose Chiffon Bridesmaid Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Bestseller</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Bridesmaid</p>
+                        <h3 class="product-name">Dusty Rose Chiffon Bridesmaid Dress</h3>
+                        <p class="product-price">$99.99 <span class="original">$199.99</span></p>
+                    </div>
+                </a>
+                 <!-- Product 10 -->
+                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_2')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80" alt="Sage Green One Shoulder Bridesmaid Dress" class="product-image" loading="lazy">
+                        <span class="product-badge new">Trending</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Bridesmaid</p>
+                        <h3 class="product-name">Sage Green One Shoulder Bridesmaid Dress</h3>
+                        <p class="product-price">$109.99 <span class="original">$219.99</span></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Gala Dresses Section -->
+        <section id="gala" class="section animate-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">Gala Dresses</h2>
+                <p class="section-subtitle">Luxurious gowns for black-tie events</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 11 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_1')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80" alt="Black Sequin Gala Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Stunning</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Gala Dresses</p>
+                        <h3 class="product-name">Black Sequin Gala Dress with Fringe Detail</h3>
+                        <p class="product-price">$299.99 <span class="original">$599.99</span></p>
+                    </div>
+                </a>
+                 <!-- Product 12 -->
+                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_2')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80" alt="White Satin Long Sleeve Gala Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Elegant</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Gala Dresses</p>
+                        <h3 class="product-name">White Satin Long Sleeve Gala Dress</h3>
+                        <p class="product-price">$279.99 <span class="original">$559.99</span></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Red Carpet Section -->
+        <section id="red-carpet" class="section animate-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">Red Carpet Dresses</h2>
+                <p class="section-subtitle">Award-show worthy glamorous gowns</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 13 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_1')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80" alt="Black Fringe Red Carpet Gown" class="product-image" loading="lazy">
+                        <span class="product-badge">Oscar Style</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Red Carpet</p>
+                        <h3 class="product-name">Black Fringe Red Carpet Gown</h3>
+                        <p class="product-price">$399.99 <span class="original">$799.99</span></p>
+                    </div>
+                </a>
+                 <!-- Product 14 -->
+                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_2')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80" alt="White Cape Sleeve Red Carpet Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Dramatic</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Red Carpet</p>
+                        <h3 class="product-name">White Cape Sleeve Red Carpet Dress</h3>
+                        <p class="product-price">$379.99 <span class="original">$759.99</span></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Birthday Section -->
+        <section id="birthday" class="section animate-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">Birthday Outfits</h2>
+                <p class="section-subtitle">Celebrate in style with party-perfect dresses</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 15 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_1')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80" alt="Green Two-Piece Birthday Dress Set" class="product-image" loading="lazy">
+                        <span class="product-badge">Party Ready</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Birthday</p>
+                        <h3 class="product-name">Green Two-Piece Birthday Dress Set</h3>
+                        <p class="product-price">$89.99 <span class="original">$179.99</span></p>
+                    </div>
+                </a>
+                 <!-- Product 16 -->
+                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_2')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80" alt="Silver Metallic Birthday Cocktail Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Sparkle</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Birthday</p>
+                        <h3 class="product-name">Silver Metallic Birthday Cocktail Dress</h3>
+                        <p class="product-price">$109.99 <span class="original">$219.99</span></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Graduation Section -->
+        <section id="graduation" class="section animate-on-scroll">
+            <div class="section-header">
+                <h2 class="section-title">Graduation Dresses</h2>
+                <p class="section-subtitle">Celebrate your achievement in style</p>
+            </div>
+            <div class="product-grid">
+                <!-- Product 17 -->
+                <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_1')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80" alt="White Lace Graduation Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Classic</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Graduation</p>
+                        <h3 class="product-name">White Lace Graduation Dress</h3>
+                        <p class="product-price">$109.99 <span class="original">$219.99</span></p>
+                    </div>
+                </a>
+                 <!-- Product 18 -->
+                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_2')">
+                    <div class="product-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80" alt="Floral Midi Graduation Dress" class="product-image" loading="lazy">
+                        <span class="product-badge">Spring</span>
+                        <div class="product-overlay"><span class="product-quick-view">Quick View</span></div>
+                    </div>
+                    <div class="product-info">
+                        <p class="product-category">Graduation</p>
+                        <h3 class="product-name">Floral Midi Graduation Dress</h3>
+                        <p class="product-price">$89.99 <span class="original">$179.99</span></p>
+                    </div>
+                </a>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- Bottom CTA Section -->
+    <section class="bottom-cta">
+        <h2 class="bottom-cta-title">✨ Ready to Find Your Perfect Dress? ✨</h2>
+        <p class="bottom-cta-text">Join thousands of satisfied customers who found their dream dress at unbeatable prices. Limited stock available - shop now before it's gone!</p>
+        <div class="bottom-cta-buttons">
+            <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="bottom-cta-btn primary" onclick="trackClick('bottom_primary')">Shop All Dresses</a>
+            <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="bottom-cta-btn secondary" onclick="trackClick('bottom_secondary')">View New Arrivals</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#" class="footer-link">Home</a>
+            <a href="#" class="footer-link">Shop</a>
+            <a href="#" class="footer-link">About Us</a>
+            <a href="#" class="footer-link">Contact</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
+        </div>
+        <p>© 2026 Bae Moments Collection. All rights reserved.</p>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
+    
+    <!-- JavaScript -->
+    <script>
+        const AFFILIATE_URL = 'https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}';
+        
+        function trackClick(elementId) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {'event_category': 'affiliate', 'event_label': elementId});
+            }
+            console.log('Click tracked:', elementId);
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Scroll effects
+        window.addEventListener('scroll', function() {
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.pageYOffset > 300) scrollTop.classList.add('visible');
+            else scrollTop.classList.remove('visible');
+            
+            // Active nav highlighting
+            const sections = document.querySelectorAll('.section');
+            const navItems = document.querySelectorAll('.nav-item a');
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) current = section.getAttribute('id');
+            });
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) item.classList.add('active');
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
