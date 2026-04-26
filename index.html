@@ -12,506 +12,881 @@
     <meta property="og:title" content="2026 Formal Dress Collection | Prom, Wedding, Gala & More">
     <meta property="og:description" content="Shop the hottest evening dresses for prom, weddings, galas & special events. Trending styles for every occasion.">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=1200&q=80">
+    <meta property="og:image" content="images/dress-01.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2026 Formal Dress Collection | Prom, Wedding, Gala & More">
+    <meta name="twitter:description" content="Shop the hottest evening dresses for prom, weddings, galas & special events.">
     
     <title>2026 Formal Dress Collection | Prom, Wedding Guest, Bridesmaid & Gala Dresses</title>
     
     <!-- Favicon -->
-    <link rel="icon" href="image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👗</text></svg>">
     
-    <!-- Preconnect for Speed -->
+    <!-- Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://images.unsplash.com">
     
-    <!-- Google Fonts Optimized -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     
     <style>
+        /* --- CSS VARIABLES & RESET --- */
         :root {
-            --color-black: #0a0a0a; --color-charcoal: #1a1a1a; --color-white: #ffffff;
-            --color-gold: #d4af37; --color-gold-light: #f3e5ab; --color-rose: #e0bfb8;
-            --color-burgundy: #800020; --color-bg: #faf9f6; --color-text: #333333;
-            --font-heading: 'Playfair Display', serif; --font-body: 'Inter', sans-serif;
-            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04); --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
-            --shadow-lg: 0 16px 48px rgba(0,0,0,0.12); --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.3);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --color-black: #0a0a0a;
+            --color-charcoal: #1a1a1a;
+            --color-white: #ffffff;
+            --color-gold: #d4af37;
+            --color-gold-light: #f3e5ab;
+            --color-rose: #e0bfb8;
+            --color-burgundy: #800020;
+            --color-bg: #faf9f6;
+            --color-text: #333333;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+            --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+            --shadow-gold: 0 8px 24px rgba(212, 175, 55, 0.3);
+            
+            --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
+
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        
         html { scroll-behavior: smooth; font-size: 16px; }
-        body { font-family: var(--font-body); background-color: var(--color-bg); color: var(--color-text); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
         a { text-decoration: none; color: inherit; transition: var(--transition); }
-        img { max-width: 100%; height: auto; display: block; background-color: #f0f0f0; }
+        img { max-width: 100%; height: auto; display: block; width: 100%; object-fit: cover; }
         ul { list-style: none; }
-        .container { max-width: 1400px; margin: 0 auto; padding: 0 1rem; }
+
+        /* --- UTILITIES & ANIMATIONS --- */
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
         
-        /* Animations */
-        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes pulse-glow { 0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); } 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); } }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+        }
+
         .animate-on-scroll { opacity: 0; animation: none; }
-        .animate-on-scroll.visible { animation: fadeInUp 0.6s ease forwards; }
+        .animate-on-scroll.visible { animation: fadeInUp 0.8s ease forwards; }
 
-        /* Header */
-        .header { background: linear-gradient(135deg, var(--color-black) 0%, var(--color-charcoal) 100%); color: var(--color-white); padding: 2.5rem 1rem; text-align: center; position: relative; overflow: hidden; }
-        .header-logo { font-family: var(--font-heading); font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.5rem; background: linear-gradient(45deg, var(--color-white), var(--color-gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .header-tagline { font-size: 0.95rem; opacity: 0.8; font-weight: 300; margin-bottom: 1.5rem; }
-        .header-cta { display: inline-block; background: linear-gradient(45deg, var(--color-gold), #b59020); color: var(--color-black); padding: 0.9rem 2rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.2px; font-size: 0.85rem; box-shadow: var(--shadow-gold); animation: pulse-glow 2s infinite; }
-        .header-cta:hover { transform: translateY(-2px); }
-
-        /* Navigation */
-        .nav-categories { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); padding: 0.8rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: var(--shadow-sm); border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .nav-list { display: flex; gap: 0.8rem; padding: 0 1rem; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
-        .nav-list::-webkit-scrollbar { display: none; }
-        .nav-item a { display: block; padding: 0.5rem 1.2rem; background: var(--color-bg); border: 1px solid rgba(0,0,0,0.05); border-radius: 25px; font-size: 0.8rem; font-weight: 500; color: var(--color-text); white-space: nowrap; transition: var(--transition); }
-        .nav-item a:hover, .nav-item a.active { background: var(--color-black); color: var(--color-white); border-color: var(--color-black); transform: translateY(-1px); }
-
-        /* Sections */
-        .section { padding: 3rem 0; border-bottom: 1px solid rgba(0,0,0,0.03); }
-        .section-header { text-align: center; margin-bottom: 2rem; }
-        .section-title { font-family: var(--font-heading); font-size: 2rem; font-weight: 700; color: var(--color-black); margin-bottom: 0.4rem; }
-        .section-subtitle { font-size: 1rem; color: #666; font-weight: 300; font-style: italic; }
-
-        /* Grid */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1.2rem; }
-        @media (min-width: 768px) { .product-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 2rem; } .section-title { font-size: 2.5rem; } }
+        /* --- HEADER --- */
+        .header {
+            background: linear-gradient(135deg, var(--color-black) 0%, var(--color-charcoal) 100%);
+            color: var(--color-white);
+            padding: 3rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
         
-        /* Card */
-        .product-card { background: var(--color-white); border-radius: 12px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); position: relative; display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-        .product-image-wrapper { position: relative; overflow: hidden; aspect-ratio: 3/4; background: #f0f0f0; }
-        .product-image { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; will-change: transform; }
+        .header-logo {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, var(--color-white), var(--color-gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-tagline {
+            font-size: 1rem;
+            opacity: 0.8;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-cta {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--color-gold), #b59020);
+            color: var(--color-black);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 0.9rem;
+            box-shadow: var(--shadow-gold);
+            position: relative;
+            z-index: 1;
+            animation: pulse-glow 2s infinite;
+        }
+        
+        .header-cta:hover { transform: translateY(-3px); }
+
+        /* --- NAVIGATION --- */
+        .nav-categories {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .nav-list {
+            display: flex;
+            gap: 0.75rem;
+            padding: 0 1.5rem;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            scroll-snap-type: x mandatory;
+        }
+        
+        .nav-list::-webkit-scrollbar { display: none; }
+        
+        .nav-item a {
+            display: block;
+            padding: 0.6rem 1.25rem;
+            background: var(--color-bg);
+            border: 1px solid rgba(0,0,0,0.05);
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-text);
+            white-space: nowrap;
+            transition: var(--transition);
+            scroll-snap-align: start;
+        }
+        
+        .nav-item a:hover, .nav-item a.active {
+            background: var(--color-black);
+            color: var(--color-white);
+            border-color: var(--color-black);
+            transform: translateY(-2px);
+        }
+
+        /* --- SECTIONS --- */
+        .section { padding: 4rem 0; border-bottom: 1px solid rgba(0,0,0,0.03); }
+        
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-black);
+            margin-bottom: 0.5rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        /* --- PRODUCT GRID --- */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+            .section-title { font-size: 2rem; }
+            .header-logo { font-size: 2rem; }
+            .nav-categories { top: 0; }
+        }
+        
+        @media (max-width: 480px) {
+            .product-grid { grid-template-columns: 1fr; }
+            .header-cta { padding: 0.8rem 2rem; font-size: 0.8rem; }
+        }
+
+        /* --- PRODUCT CARD --- */
+        .product-card {
+            background: var(--color-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .product-image-wrapper {
+            position: relative;
+            overflow: hidden;
+            aspect-ratio: 3/4;
+            background: #f0f0f0;
+            width: 100%;
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            will-change: transform;
+        }
+        
         .product-card:hover .product-image { transform: scale(1.05); }
-        .product-badge { position: absolute; top: 8px; left: 8px; background: var(--color-black); color: var(--color-gold); padding: 0.3rem 0.6rem; border-radius: 4px; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; z-index: 2; }
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--color-black);
+            color: var(--color-gold);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        
         .product-badge.sale { background: var(--color-burgundy); color: white; }
         .product-badge.new { background: var(--color-gold); color: black; }
-        .product-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%); opacity: 0; transition: var(--transition); display: flex; align-items: flex-end; justify-content: center; padding: 1rem; }
+
+        .product-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);
+            opacity: 0;
+            transition: var(--transition);
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
         .product-card:hover .product-overlay { opacity: 1; }
-        .product-quick-view { background: var(--color-white); color: var(--color-black); padding: 0.6rem 1.2rem; border-radius: 25px; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; transform: translateY(10px); transition: var(--transition); }
+        
+        .product-quick-view {
+            background: var(--color-white);
+            color: var(--color-black);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            transform: translateY(10px);
+            transition: var(--transition);
+        }
+        
         .product-card:hover .product-quick-view { transform: translateY(0); }
-        .product-info { padding: 1rem; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
-        .product-category { font-size: 0.7rem; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem; }
-        .product-name { font-family: var(--font-heading); font-size: 1rem; font-weight: 600; color: var(--color-black); margin-bottom: 0.5rem; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-        .product-price { font-size: 1.1rem; font-weight: 700; color: var(--color-burgundy); margin-bottom: 0.5rem; }
-        .product-price .original { font-size: 0.85rem; color: #aaa; text-decoration: line-through; margin-left: 0.4rem; font-weight: 400; }
+        
+        .product-info { 
+            padding: 1rem; 
+            text-align: center; 
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .product-category {
+            font-size: 0.7rem;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            margin-bottom: 0.4rem;
+        }
+        
+        .product-name {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-black);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .product-price {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-burgundy);
+            margin-bottom: 0;
+        }
+        
+        .product-price .original {
+            font-size: 0.85rem;
+            color: #aaa;
+            text-decoration: line-through;
+            margin-left: 0.4rem;
+            font-weight: 400;
+        }
 
-        /* Bottom CTA */
-        .bottom-cta { background: linear-gradient(135deg, var(--color-black) 0%, #2c2c2c 100%); color: var(--color-white); padding: 4rem 1rem; text-align: center; }
-        .bottom-cta-title { font-family: var(--font-heading); font-size: 2rem; margin-bottom: 1rem; color: var(--color-gold-light); }
-        .bottom-cta-text { font-size: 1rem; opacity: 0.8; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
-        .bottom-cta-buttons { display: grid; grid-template-columns: 1fr; gap: 1rem; max-width: 500px; margin: 0 auto; }
-        @media (min-width: 600px) { .bottom-cta-buttons { grid-template-columns: 1fr 1fr; } }
-        .bottom-cta-btn { padding: 1rem 1.5rem; border-radius: 50px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; text-align: center; transition: var(--transition); font-size: 0.9rem; }
-        .bottom-cta-btn.primary { background: var(--color-gold); color: var(--color-black); }
-        .bottom-cta-btn.primary:hover { background: #fff; transform: translateY(-2px); }
-        .bottom-cta-btn.secondary { background: transparent; border: 2px solid var(--color-white); color: var(--color-white); }
-        .bottom-cta-btn.secondary:hover { background: var(--color-white); color: var(--color-black); transform: translateY(-2px); }
+        /* --- BOTTOM CTA --- */
+        .bottom-cta {
+            background: linear-gradient(135deg, var(--color-black) 0%, #2c2c2c 100%);
+            color: var(--color-white);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
 
-        /* Footer */
-        .footer { background: var(--color-black); color: #888; padding: 2rem 1rem; text-align: center; font-size: 0.85rem; }
-        .footer-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+        .bottom-cta-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            color: var(--color-gold-light);
+        }
+        
+        .bottom-cta-text {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .bottom-cta-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .bottom-cta-btn {
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            text-align: center;
+            display: block;
+        }
+        
+        .bottom-cta-btn.primary {
+            background: var(--color-gold);
+            color: var(--color-black);
+        }
+        
+        .bottom-cta-btn.primary:hover {
+            background: #fff;
+            transform: translateY(-3px);
+        }
+        
+        .bottom-cta-btn.secondary {
+            background: transparent;
+            border: 2px solid var(--color-white);
+            color: var(--color-white);
+        }
+        
+        .bottom-cta-btn.secondary:hover {
+            background: var(--color-white);
+            color: var(--color-black);
+            transform: translateY(-3px);
+        }
+
+        /* --- FOOTER --- */
+        .footer {
+            background: var(--color-black);
+            color: #888;
+            padding: 3rem 1rem;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
         .footer-link:hover { color: var(--color-gold); }
         
-        /* Scroll Top */
-        .scroll-top { position: fixed; bottom: 1.5rem; right: 1.5rem; width: 45px; height: 45px; background: var(--color-gold); color: var(--color-black); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; cursor: pointer; opacity: 0; visibility: hidden; transition: var(--transition); z-index: 999; box-shadow: var(--shadow-gold); }
+        /* --- SCROLL TOP --- */
+        .scroll-top {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            width: 45px;
+            height: 45px;
+            background: var(--color-gold);
+            color: var(--color-black);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-gold);
+        }
+        
         .scroll-top.visible { opacity: 1; visibility: visible; }
-        .scroll-top:hover { transform: translateY(-3px); }
-        .urgency-banner { background: var(--color-burgundy); color: white; text-align: center; padding: 0.5rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.5px; }
+        .scroll-top:hover { transform: translateY(-5px); }
+
+        /* --- URGENCY BANNER --- */
+        .urgency-banner {
+            background: var(--color-burgundy);
+            color: white;
+            text-align: center;
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
     </style>
     
+    <!-- Schema Markup -->
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"CollectionPage","name":"2026 Formal Dress Collection","description":"Discover trending prom dresses, wedding guest outfits, bridesmaid dresses, gala gowns and formal wear.","url":"https://baemoments.com"}
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "2026 Formal Dress Collection",
+        "description": "Discover trending prom dresses, wedding guest outfits, bridesmaid dresses, gala gowns and formal wear for every special occasion in 2026.",
+        "url": "https://antondrakon.github.io/baemoments/",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Red Ballgown Prom Dress"},
+                {"@type": "ListItem", "position": 2, "name": "Black Sequin Mermaid Gown"}
+            ]
+        }
+    }
     </script>
 </head>
 <body>
-    <div class="urgency-banner">🔥 FLASH SALE: Up to 70% OFF - Limited Time Only! 🔥</div>
+    <!-- Urgency Banner -->
+    <div class="urgency-banner">
+        🔥 FLASH SALE: Up to 70% OFF - Limited Time Only! 🔥
+    </div>
     
+    <!-- Header -->
     <header class="header">
         <div class="header-logo">✨ Bae Moments</div>
         <p class="header-tagline">Your Destination for 2026's Hottest Formal Dresses</p>
         <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="header-cta" onclick="trackClick('header_cta')">Shop Collection</a>
     </header>
     
+    <!-- Navigation -->
     <nav class="nav-categories">
         <ul class="nav-list">
-            <li class="nav-item"><a href="#prom">Prom</a></li>
+            <li class="nav-item"><a href="#prom">Prom Dresses</a></li>
             <li class="nav-item"><a href="#wedding-guest">Wedding Guest</a></li>
             <li class="nav-item"><a href="#bridesmaid">Bridesmaid</a></li>
-            <li class="nav-item"><a href="#gala">Gala</a></li>
+            <li class="nav-item"><a href="#gala">Gala Dresses</a></li>
             <li class="nav-item"><a href="#red-carpet">Red Carpet</a></li>
             <li class="nav-item"><a href="#birthday">Birthday</a></li>
             <li class="nav-item"><a href="#graduation">Graduation</a></li>
         </ul>
     </nav>
     
+    <!-- Main Content -->
     <main class="container">
-        <!-- PROM DRESSES (8 Items) -->
+        
+        <!-- Prom Dresses Section (1-8) -->
         <section id="prom" class="section animate-on-scroll">
-            <div class="section-header"><h2 class="section-title">Prom Dresses 2026</h2><p class="section-subtitle">Stunning gowns for your unforgettable night</p></div>
+            <div class="section-header">
+                <h2 class="section-title">Prom Dresses 2026</h2>
+                <p class="section-subtitle">Stunning gowns for your unforgettable night</p>
+            </div>
             <div class="product-grid">
-                <!-- P1 -->
+                <!-- Products 1-8 generated dynamically via loop in thought, hardcoded here -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_1')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop" alt="Red Ballgown Prom Dress" class="product-image" loading="lazy"><span class="product-badge">Bestseller</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">Red Ballgown with Beaded Bodice</h3><p class="product-price">$189.99 <span class="original">$379.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-01.jpg" alt="Red Ballgown Prom Dress" class="product-image" loading="lazy"><span class="product-badge">Bestseller</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">Red Ballgown Prom Dress with Beaded Bodice</h3><p class="product-price">$189.99 <span class="original">$379.99</span></p></div>
                 </a>
-                <!-- P2 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_2')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop" alt="Black Sequin Mermaid Dress" class="product-image" loading="lazy"><span class="product-badge new">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">Black Sequin Mermaid Gown</h3><p class="product-price">$219.99 <span class="original">$439.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-02.jpg" alt="Black Sequin Mermaid Prom Dress" class="product-image" loading="lazy"><span class="product-badge new">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">Black Sequin Mermaid Prom Dress</h3><p class="product-price">$219.99 <span class="original">$439.99</span></p></div>
                 </a>
-                <!-- P3 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_3')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop" alt="White Lace A-Line Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">White Lace A-Line Dream</h3><p class="product-price">$169.99 <span class="original">$339.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-03.jpg" alt="White Lace A-Line Prom Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">White Lace A-Line Prom Dress</h3><p class="product-price">$169.99 <span class="original">$339.99</span></p></div>
                 </a>
-                <!-- P4 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_4')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop" alt="Emerald Green Two-Piece" class="product-image" loading="lazy"><span class="product-badge new">New</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">Emerald Green Two-Piece Set</h3><p class="product-price">$149.99 <span class="original">$299.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-04.jpg" alt="Emerald Green Two-Piece Prom Set" class="product-image" loading="lazy"><span class="product-badge new">New</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">Emerald Green Two-Piece Prom Set</h3><p class="product-price">$149.99 <span class="original">$299.99</span></p></div>
                 </a>
-                <!-- P5 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_5')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop" alt="Blush Pink Tulle Gown" class="product-image" loading="lazy"><span class="product-badge">Popular</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">Blush Pink Tulle Princess</h3><p class="product-price">$199.99 <span class="original">$399.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-05.jpg" alt="Champagne Gold Long Sleeve Prom Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">Champagne Gold Long Sleeve Prom Dress</h3><p class="product-price">$199.99 <span class="original">$399.99</span></p></div>
                 </a>
-                <!-- P6 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_6')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&q=80&fit=crop" alt="Navy Blue Velvet Dress" class="product-image" loading="lazy"><span class="product-badge sale">Sale</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">Navy Blue Velvet Elegance</h3><p class="product-price">$159.99 <span class="original">$319.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-06.jpg" alt="Burgundy One Shoulder Prom Dress" class="product-image" loading="lazy"><span class="product-badge sale">Sale</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">Burgundy One Shoulder Prom Dress</h3><p class="product-price">$159.99 <span class="original">$319.99</span></p></div>
                 </a>
-                <!-- P7 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_7')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=1" alt="Gold Metallic Gown" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">Gold Metallic Shine</h3><p class="product-price">$229.99 <span class="original">$459.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-07.jpg" alt="Blush Pink Sparkle Ballgown Prom Dress" class="product-image" loading="lazy"><span class="product-badge">Popular</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">Blush Pink Sparkle Ballgown Prom Dress</h3><p class="product-price">$229.99 <span class="original">$459.99</span></p></div>
                 </a>
-                <!-- P8 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('prom_8')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=2" alt="Silver Sparkle Dress" class="product-image" loading="lazy"><span class="product-badge">Hot</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Prom</p><h3 class="product-name">Silver Sparkle Sensation</h3><p class="product-price">$209.99 <span class="original">$419.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-08.jpg" alt="Navy Blue Beaded Mermaid Prom Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Prom Dresses</p><h3 class="product-name">Navy Blue Beaded Mermaid Prom Dress</h3><p class="product-price">$209.99 <span class="original">$419.99</span></p></div>
                 </a>
             </div>
         </section>
-
-        <!-- WEDDING GUEST (8 Items) -->
+        
+        <!-- Wedding Guest Section (9-16) -->
         <section id="wedding-guest" class="section animate-on-scroll">
-            <div class="section-header"><h2 class="section-title">Wedding Guest Dresses</h2><p class="section-subtitle">Elegant outfits for every celebration</p></div>
+            <div class="section-header">
+                <h2 class="section-title">Wedding Guest Dresses</h2>
+                <p class="section-subtitle">Elegant outfits for every wedding celebration</p>
+            </div>
             <div class="product-grid">
-                <!-- W1 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_1')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop" alt="Floral Midi Dress" class="product-image" loading="lazy"><span class="product-badge">Bestseller</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Floral Midi with Lace</h3><p class="product-price">$129.99 <span class="original">$259.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-09.jpg" alt="Floral Midi Wedding Guest Dress" class="product-image" loading="lazy"><span class="product-badge">Bestseller</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Floral Midi Wedding Guest Dress with Lace</h3><p class="product-price">$129.99 <span class="original">$259.99</span></p></div>
                 </a>
-                <!-- W2 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_2')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=3" alt="Sage Green Maxi" class="product-image" loading="lazy"><span class="product-badge new">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Sage Green Maxi Silk</h3><p class="product-price">$149.99 <span class="original">$299.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-10.jpg" alt="Sage Green Maxi Wedding Guest Dress" class="product-image" loading="lazy"><span class="product-badge new">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Sage Green Maxi Wedding Guest Dress</h3><p class="product-price">$149.99 <span class="original">$299.99</span></p></div>
                 </a>
-                <!-- W3 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_3')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=4" alt="Burgundy Satin Off-Shoulder" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Burgundy Satin Off-Shoulder</h3><p class="product-price">$139.99 <span class="original">$279.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-11.jpg" alt="Burgundy Satin Off-Shoulder Wedding Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Burgundy Satin Off-Shoulder Wedding Dress</h3><p class="product-price">$139.99 <span class="original">$279.99</span></p></div>
                 </a>
-                <!-- W4 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_4')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop&sig=1" alt="Navy Blue Lace Cocktail" class="product-image" loading="lazy"><span class="product-badge new">New</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Navy Blue Lace Cocktail</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-12.jpg" alt="Navy Blue Lace Cocktail Wedding Dress" class="product-image" loading="lazy"><span class="product-badge new">New</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Navy Blue Lace Cocktail Wedding Dress</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
                 </a>
-                <!-- W5 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_5')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=1" alt="Champagne Chiffon" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Champagne Chiffon Flow</h3><p class="product-price">$159.99 <span class="original">$319.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-13.jpg" alt="Blush Pink Chiffon Maxi Wedding Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Blush Pink Chiffon Maxi Wedding Dress</h3><p class="product-price">$159.99 <span class="original">$319.99</span></p></div>
                 </a>
-                <!-- W6 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_6')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&q=80&fit=crop&sig=1" alt="Terracotta Wrap Dress" class="product-image" loading="lazy"><span class="product-badge">Fall Fav</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Terracotta Wrap Style</h3><p class="product-price">$139.99 <span class="original">$279.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-14.jpg" alt="Cream Elegant Wedding Guest Jumpsuit" class="product-image" loading="lazy"><span class="product-badge">Unique</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Cream Elegant Wedding Guest Jumpsuit</h3><p class="product-price">$139.99 <span class="original">$279.99</span></p></div>
                 </a>
-                <!-- W7 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_7')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=1" alt="Silver Metallic Cocktail" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Silver Metallic Cocktail</h3><p class="product-price">$169.99 <span class="original">$339.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-15.jpg" alt="Terracotta Velvet Wrap Wedding Dress" class="product-image" loading="lazy"><span class="product-badge">Fall Favorite</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Terracotta Velvet Wrap Wedding Dress</h3><p class="product-price">$149.99 <span class="original">$299.99</span></p></div>
                 </a>
-                <!-- W8 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('wedding_8')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=5" alt="Dusty Rose Jumpsuit" class="product-image" loading="lazy"><span class="product-badge">Unique</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Dusty Rose Elegant Jumpsuit</h3><p class="product-price">$149.99 <span class="original">$299.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-16.jpg" alt="Silver Metallic Cocktail Wedding Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Wedding Guest</p><h3 class="product-name">Silver Metallic Cocktail Wedding Dress</h3><p class="product-price">$169.99 <span class="original">$339.99</span></p></div>
                 </a>
             </div>
         </section>
 
-        <!-- BRIDESMAID (8 Items) -->
+        <!-- Bridesmaid Section (17-24) -->
         <section id="bridesmaid" class="section animate-on-scroll">
-            <div class="section-header"><h2 class="section-title">Bridesmaid Dresses</h2><p class="section-subtitle">Beautiful styles for your party</p></div>
+            <div class="section-header">
+                <h2 class="section-title">Bridesmaid Dresses</h2>
+                <p class="section-subtitle">Beautiful dresses for your bridal party</p>
+            </div>
             <div class="product-grid">
-                <!-- B1 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_1')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=2" alt="Dusty Rose Chiffon" class="product-image" loading="lazy"><span class="product-badge">Bestseller</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Dusty Rose Chiffon</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-17.jpg" alt="Dusty Rose Chiffon Bridesmaid Dress" class="product-image" loading="lazy"><span class="product-badge">Bestseller</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Dusty Rose Chiffon Bridesmaid Dress</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
                 </a>
-                <!-- B2 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_2')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=2" alt="Sage Green One Shoulder" class="product-image" loading="lazy"><span class="product-badge new">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Sage Green One Shoulder</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-18.jpg" alt="Sage Green One Shoulder Bridesmaid Dress" class="product-image" loading="lazy"><span class="product-badge new">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Sage Green One Shoulder Bridesmaid Dress</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
                 </a>
-                <!-- B3 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_3')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop&sig=2" alt="Blush Pink Tulle" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Blush Pink Tulle Soft</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-19.jpg" alt="Blush Pink Tulle Bridesmaid Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Blush Pink Tulle Bridesmaid Dress</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
                 </a>
-                <!-- B4 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_4')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=5" alt="Terracotta Wrap" class="product-image" loading="lazy"><span class="product-badge new">New</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Terracotta Wrap Fit</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-20.jpg" alt="Terracotta Wrap Bridesmaid Dress" class="product-image" loading="lazy"><span class="product-badge new">New</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Terracotta Wrap Bridesmaid Dress</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
                 </a>
-                <!-- B5 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_5')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&q=80&fit=crop&sig=2" alt="Ice Blue Chiffon" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Ice Blue Chiffon Airy</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-21.jpg" alt="Ice Blue Chiffon Bridesmaid Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Ice Blue Chiffon Bridesmaid Dress</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
                 </a>
-                <!-- B6 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_6')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=6" alt="Champagne Gold Satin" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Champagne Gold Satin</h3><p class="product-price">$129.99 <span class="original">$259.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-22.jpg" alt="Champagne Gold Satin Bridesmaid Dress" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Champagne Gold Satin Bridesmaid Dress</h3><p class="product-price">$129.99 <span class="original">$259.99</span></p></div>
                 </a>
-                <!-- B7 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_7')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=3" alt="Mauve Velvet Strapless" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Mauve Velvet Strapless</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-23.jpg" alt="Mauve Velvet Strapless Bridesmaid Dress" class="product-image" loading="lazy"><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Mauve Velvet Strapless Bridesmaid Dress</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
                 </a>
-                <!-- B8 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('bridesmaid_8')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=3" alt="Navy Blue Long Sleeve" class="product-image" loading="lazy"><span class="product-badge">Winter</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Navy Blue Long Sleeve</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-24.jpg" alt="Navy Blue Velvet Long Sleeve Bridesmaid Dress" class="product-image" loading="lazy"><span class="product-badge">Winter</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Bridesmaid</p><h3 class="product-name">Navy Blue Velvet Long Sleeve Bridesmaid Dress</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
                 </a>
             </div>
         </section>
 
-        <!-- GALA (8 Items) -->
+        <!-- Gala Dresses Section (25-32) -->
         <section id="gala" class="section animate-on-scroll">
-            <div class="section-header"><h2 class="section-title">Gala Dresses</h2><p class="section-subtitle">Luxurious gowns for black-tie</p></div>
+            <div class="section-header">
+                <h2 class="section-title">Gala Dresses</h2>
+                <p class="section-subtitle">Luxurious gowns for black-tie events</p>
+            </div>
             <div class="product-grid">
-                <!-- G1 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_1')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=6" alt="Black Sequin Fringe" class="product-image" loading="lazy"><span class="product-badge">Stunning</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">Black Sequin Fringe</h3><p class="product-price">$299.99 <span class="original">$599.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-25.jpg" alt="Black Sequin Gala Dress with Fringe" class="product-image" loading="lazy"><span class="product-badge">Stunning</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">Black Sequin Gala Dress with Fringe Detail</h3><p class="product-price">$299.99 <span class="original">$599.99</span></p></div>
                 </a>
-                <!-- G2 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_2')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=7" alt="White Satin Long Sleeve" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">White Satin Long Sleeve</h3><p class="product-price">$279.99 <span class="original">$559.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-26.jpg" alt="White Satin Long Sleeve Gala Dress" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">White Satin Long Sleeve Gala Dress</h3><p class="product-price">$279.99 <span class="original">$559.99</span></p></div>
                 </a>
-                <!-- G3 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_3')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop&sig=3" alt="Red Velvet Asymmetrical" class="product-image" loading="lazy"><span class="product-badge">Dramatic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">Red Velvet Asymmetrical</h3><p class="product-price">$259.99 <span class="original">$519.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-27.jpg" alt="Red Velvet Asymmetrical Gala Dress" class="product-image" loading="lazy"><span class="product-badge">Dramatic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">Red Velvet Asymmetrical Gala Dress</h3><p class="product-price">$259.99 <span class="original">$519.99</span></p></div>
                 </a>
-                <!-- G4 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_4')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=4" alt="Gold Metallic Mermaid" class="product-image" loading="lazy"><span class="product-badge">Glamorous</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">Gold Metallic Mermaid</h3><p class="product-price">$319.99 <span class="original">$639.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-28.jpg" alt="Gold Metallic Mermaid Gala Dress" class="product-image" loading="lazy"><span class="product-badge">Glamorous</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">Gold Metallic Mermaid Gala Dress</h3><p class="product-price">$319.99 <span class="original">$639.99</span></p></div>
                 </a>
-                <!-- G5 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_5')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&q=80&fit=crop&sig=3" alt="Teal Velvet One Shoulder" class="product-image" loading="lazy"><span class="product-badge">Pantone 26</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">Teal Velvet One Shoulder</h3><p class="product-price">$289.99 <span class="original">$579.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-29.jpg" alt="Teal Velvet One Shoulder Gala Dress" class="product-image" loading="lazy"><span class="product-badge">Pantone 2026</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">Teal Velvet One Shoulder Gala Dress</h3><p class="product-price">$289.99 <span class="original">$579.99</span></p></div>
                 </a>
-                <!-- G6 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_6')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=4" alt="Silver Beaded V-Neck" class="product-image" loading="lazy"><span class="product-badge">Sparkle</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">Silver Beaded V-Neck</h3><p class="product-price">$329.99 <span class="original">$659.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-30.jpg" alt="Silver Beaded V-Neck Gala Dress" class="product-image" loading="lazy"><span class="product-badge">Sparkle</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">Silver Beaded V-Neck Gala Dress</h3><p class="product-price">$329.99 <span class="original">$659.99</span></p></div>
                 </a>
-                <!-- G7 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_7')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=7" alt="Black Sequin Column" class="product-image" loading="lazy"><span class="product-badge">Classic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">Black Sequin Column</h3><p class="product-price">$249.99 <span class="original">$499.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-31.jpg" alt="Black Sequin Column Gala Dress" class="product-image" loading="lazy"><span class="product-badge">Classic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">Black Sequin Column Gala Dress</h3><p class="product-price">$249.99 <span class="original">$499.99</span></p></div>
                 </a>
-                <!-- G8 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('gala_8')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=8" alt="White Lace Overlay" class="product-image" loading="lazy"><span class="product-badge">Romantic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Gala</p><h3 class="product-name">White Lace Overlay</h3><p class="product-price">$269.99 <span class="original">$539.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-32.jpg" alt="White Lace Overlay Gala Dress" class="product-image" loading="lazy"><span class="product-badge">Romantic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Gala Dresses</p><h3 class="product-name">White Lace Overlay Gala Dress</h3><p class="product-price">$269.99 <span class="original">$539.99</span></p></div>
                 </a>
             </div>
         </section>
 
-        <!-- RED CARPET (8 Items) -->
+        <!-- Red Carpet Section (33-40) -->
         <section id="red-carpet" class="section animate-on-scroll">
-            <div class="section-header"><h2 class="section-title">Red Carpet Dresses</h2><p class="section-subtitle">Award-show worthy gowns</p></div>
+            <div class="section-header">
+                <h2 class="section-title">Red Carpet Dresses</h2>
+                <p class="section-subtitle">Award-show worthy glamorous gowns</p>
+            </div>
             <div class="product-grid">
-                <!-- R1 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_1')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=8" alt="Black Fringe Gown" class="product-image" loading="lazy"><span class="product-badge">Oscar Style</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Black Fringe Statement</h3><p class="product-price">$399.99 <span class="original">$799.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-33.jpg" alt="Black Fringe Red Carpet Gown" class="product-image" loading="lazy"><span class="product-badge">Oscar Style</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Black Fringe Red Carpet Gown</h3><p class="product-price">$399.99 <span class="original">$799.99</span></p></div>
                 </a>
-                <!-- R2 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_2')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=9" alt="White Cape Sleeve" class="product-image" loading="lazy"><span class="product-badge">Dramatic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">White Cape Sleeve</h3><p class="product-price">$379.99 <span class="original">$759.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-34.jpg" alt="White Cape Sleeve Red Carpet Dress" class="product-image" loading="lazy"><span class="product-badge">Dramatic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">White Cape Sleeve Red Carpet Dress</h3><p class="product-price">$379.99 <span class="original">$759.99</span></p></div>
                 </a>
-                <!-- R3 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_3')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop&sig=4" alt="Red Velvet High-Low" class="product-image" loading="lazy"><span class="product-badge">Bold</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Red Velvet High-Low</h3><p class="product-price">$349.99 <span class="original">$699.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-35.jpg" alt="Red Velvet High-Low Red Carpet Dress" class="product-image" loading="lazy"><span class="product-badge">Bold</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Red Velvet High-Low Red Carpet Dress</h3><p class="product-price">$349.99 <span class="original">$699.99</span></p></div>
                 </a>
-                <!-- R4 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_4')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=5" alt="Gold Beaded Gown" class="product-image" loading="lazy"><span class="product-badge">Luxury</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Gold Beaded Luxury</h3><p class="product-price">$429.99 <span class="original">$859.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-36.jpg" alt="Gold Beaded Red Carpet Gown" class="product-image" loading="lazy"><span class="product-badge">Luxury</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Gold Beaded Red Carpet Gown</h3><p class="product-price">$429.99 <span class="original">$859.99</span></p></div>
                 </a>
-                <!-- R5 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_5')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&q=80&fit=crop&sig=4" alt="Teal Velvet Gown" class="product-image" loading="lazy"><span class="product-badge">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Teal Velvet Royal</h3><p class="product-price">$369.99 <span class="original">$739.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-37.jpg" alt="Teal Velvet Red Carpet Gown" class="product-image" loading="lazy"><span class="product-badge">Trending Color</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Teal Velvet Red Carpet Gown</h3><p class="product-price">$369.99 <span class="original">$739.99</span></p></div>
                 </a>
-                <!-- R6 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_6')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=5" alt="Silver Sequin Dress" class="product-image" loading="lazy"><span class="product-badge">Sparkle</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Silver Sequin Star</h3><p class="product-price">$389.99 <span class="original">$779.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-38.jpg" alt="Silver Sequin Red Carpet Dress" class="product-image" loading="lazy"><span class="product-badge">Sparkle</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Silver Sequin Red Carpet Dress</h3><p class="product-price">$389.99 <span class="original">$779.99</span></p></div>
                 </a>
-                <!-- R7 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_7')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=9" alt="Red Ballgown" class="product-image" loading="lazy"><span class="product-badge">Statement</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Red Ballgown Diva</h3><p class="product-price">$449.99 <span class="original">$899.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-39.jpg" alt="Red Ballgown Red Carpet Dress" class="product-image" loading="lazy"><span class="product-badge">Statement</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Red Ballgown Red Carpet Dress</h3><p class="product-price">$449.99 <span class="original">$899.99</span></p></div>
                 </a>
-                <!-- R8 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('redcarpet_8')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=10" alt="Navy Beaded Gown" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Navy Beaded Night</h3><p class="product-price">$359.99 <span class="original">$719.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-40.jpg" alt="Navy Beaded Red Carpet Gown" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Red Carpet</p><h3 class="product-name">Navy Beaded Red Carpet Gown</h3><p class="product-price">$359.99 <span class="original">$719.99</span></p></div>
                 </a>
             </div>
         </section>
 
-        <!-- BIRTHDAY (8 Items) -->
+        <!-- Birthday Section (41-48) -->
         <section id="birthday" class="section animate-on-scroll">
-            <div class="section-header"><h2 class="section-title">Birthday Outfits</h2><p class="section-subtitle">Party-perfect dresses</p></div>
+            <div class="section-header">
+                <h2 class="section-title">Birthday Outfits</h2>
+                <p class="section-subtitle">Celebrate in style with party-perfect dresses</p>
+            </div>
             <div class="product-grid">
-                <!-- BD1 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_1')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=6" alt="Green Two-Piece" class="product-image" loading="lazy"><span class="product-badge">Party Ready</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Green Two-Piece Set</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-41.jpg" alt="Green Two-Piece Birthday Dress Set" class="product-image" loading="lazy"><span class="product-badge">Party Ready</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Green Two-Piece Birthday Dress Set</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
                 </a>
-                <!-- BD2 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_2')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=6" alt="Silver Metallic Mini" class="product-image" loading="lazy"><span class="product-badge">Sparkle</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Silver Metallic Mini</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-42.jpg" alt="Silver Metallic Birthday Cocktail Dress" class="product-image" loading="lazy"><span class="product-badge">Sparkle</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Silver Metallic Birthday Cocktail Dress</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
                 </a>
-                <!-- BD3 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_3')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=10" alt="Burgundy One Shoulder" class="product-image" loading="lazy"><span class="product-badge">Hot Color</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Burgundy One Shoulder</h3><p class="product-price">$79.99 <span class="original">$159.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-43.jpg" alt="Burgundy One Shoulder Party Dress" class="product-image" loading="lazy"><span class="product-badge">Hot Color</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Burgundy One Shoulder Party Dress</h3><p class="product-price">$79.99 <span class="original">$159.99</span></p></div>
                 </a>
-                <!-- BD4 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_4')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=11" alt="Blush Pink Sparkle" class="product-image" loading="lazy"><span class="product-badge">Insta Worthy</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Blush Pink Sparkle</h3><p class="product-price">$129.99 <span class="original">$259.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-44.jpg" alt="Blush Pink Sparkle Birthday Dress" class="product-image" loading="lazy"><span class="product-badge">Instagram Worthy</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Blush Pink Sparkle Birthday Dress</h3><p class="product-price">$129.99 <span class="original">$259.99</span></p></div>
                 </a>
-                <!-- BD5 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_5')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop&sig=5" alt="Terracotta Velvet" class="product-image" loading="lazy"><span class="product-badge">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Terracotta Velvet Chic</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-45.jpg" alt="Terracotta Velvet Birthday Dress" class="product-image" loading="lazy"><span class="product-badge">Trending</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Terracotta Velvet Birthday Dress</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
                 </a>
-                <!-- BD6 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_6')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&q=80&fit=crop&sig=5" alt="Purple Strapless" class="product-image" loading="lazy"><span class="product-badge">Bold</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Purple Strapless Bold</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-46.jpg" alt="Purple Velvet Strapless Birthday Dress" class="product-image" loading="lazy"><span class="product-badge">Bold</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Purple Velvet Strapless Birthday Dress</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
                 </a>
-                <!-- BD7 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_7')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=7" alt="Black Sequin Mini" class="product-image" loading="lazy"><span class="product-badge">Night Out</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Black Sequin Mini</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-47.jpg" alt="Black Sequin Birthday Mini Dress" class="product-image" loading="lazy"><span class="product-badge">Night Out</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Black Sequin Birthday Mini Dress</h3><p class="product-price">$119.99 <span class="original">$239.99</span></p></div>
                 </a>
-                <!-- BD8 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('birthday_8')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=7" alt="Gold Metallic Party" class="product-image" loading="lazy"><span class="product-badge">Glam</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Gold Metallic Party</h3><p class="product-price">$139.99 <span class="original">$279.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-48.jpg" alt="Gold Metallic Birthday Party Dress" class="product-image" loading="lazy"><span class="product-badge">Glam</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Birthday</p><h3 class="product-name">Gold Metallic Birthday Party Dress</h3><p class="product-price">$139.99 <span class="original">$279.99</span></p></div>
                 </a>
             </div>
         </section>
 
-        <!-- GRADUATION (8 Items) -->
+        <!-- Graduation Section (49-56) -->
         <section id="graduation" class="section animate-on-scroll">
-            <div class="section-header"><h2 class="section-title">Graduation Dresses</h2><p class="section-subtitle">Celebrate in style</p></div>
+            <div class="section-header">
+                <h2 class="section-title">Graduation Dresses</h2>
+                <p class="section-subtitle">Celebrate your achievement in style</p>
+            </div>
             <div class="product-grid">
-                <!-- GR1 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_1')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop&sig=6" alt="White Lace Grad" class="product-image" loading="lazy"><span class="product-badge">Classic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">White Lace Classic</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-49.jpg" alt="White Lace Graduation Dress" class="product-image" loading="lazy"><span class="product-badge">Classic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">White Lace Graduation Dress</h3><p class="product-price">$109.99 <span class="original">$219.99</span></p></div>
                 </a>
-                <!-- GR2 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_2')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=12" alt="Floral Midi Grad" class="product-image" loading="lazy"><span class="product-badge">Spring</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Floral Midi Fresh</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-50.jpg" alt="Floral Midi Graduation Dress" class="product-image" loading="lazy"><span class="product-badge">Spring</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Floral Midi Graduation Dress</h3><p class="product-price">$89.99 <span class="original">$179.99</span></p></div>
                 </a>
-                <!-- GR3 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_3')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=600&h=800&q=80&fit=crop&sig=8" alt="Sage Green Maxi Grad" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Sage Green Maxi</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-51.jpg" alt="Sage Green Graduation Maxi Dress" class="product-image" loading="lazy"><span class="product-badge">Elegant</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Sage Green Graduation Maxi Dress</h3><p class="product-price">$99.99 <span class="original">$199.99</span></p></div>
                 </a>
-                <!-- GR4 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_4')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=600&h=800&q=80&fit=crop&sig=11" alt="Burgundy Off-Shoulder" class="product-image" loading="lazy"><span class="product-badge">Sophisticated</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Burgundy Off-Shoulder</h3><p class="product-price">$94.99 <span class="original">$189.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-52.jpg" alt="Burgundy Off-Shoulder Graduation Dress" class="product-image" loading="lazy"><span class="product-badge">Sophisticated</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Burgundy Off-Shoulder Graduation Dress</h3><p class="product-price">$94.99 <span class="original">$189.99</span></p></div>
                 </a>
-                <!-- GR5 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_5')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=600&h=800&q=80&fit=crop&sig=6" alt="Navy Lace Cocktail" class="product-image" loading="lazy"><span class="product-badge">Timeless</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Navy Lace Cocktail</h3><p class="product-price">$84.99 <span class="original">$169.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-53.jpg" alt="Navy Lace Graduation Cocktail Dress" class="product-image" loading="lazy"><span class="product-badge">Timeless</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Navy Lace Graduation Cocktail Dress</h3><p class="product-price">$84.99 <span class="original">$169.99</span></p></div>
                 </a>
-                <!-- GR6 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_6')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=600&h=800&q=80&fit=crop&sig=8" alt="Blush Pink Chiffon" class="product-image" loading="lazy"><span class="product-badge">Romantic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Blush Pink Chiffon</h3><p class="product-price">$104.99 <span class="original">$209.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-54.jpg" alt="Blush Pink Graduation Chiffon Dress" class="product-image" loading="lazy"><span class="product-badge">Romantic</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Blush Pink Graduation Chiffon Dress</h3><p class="product-price">$104.99 <span class="original">$209.99</span></p></div>
                 </a>
-                <!-- GR7 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_7')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=600&h=800&q=80&fit=crop&sig=13" alt="Cream Jumpsuit" class="product-image" loading="lazy"><span class="product-badge">Modern</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Cream Modern Jumpsuit</h3><p class="product-price">$94.99 <span class="original">$189.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-55.jpg" alt="Cream Graduation Jumpsuit" class="product-image" loading="lazy"><span class="product-badge">Modern</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Cream Graduation Jumpsuit</h3><p class="product-price">$94.99 <span class="original">$189.99</span></p></div>
                 </a>
-                <!-- GR8 -->
                 <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="product-card" onclick="trackClick('graduation_8')">
-                    <div class="product-image-wrapper"><img src="https://images.unsplash.com/photo-1596803244618-8dce6f5e478b?w=600&h=800&q=80&fit=crop&sig=7" alt="Champagne Gold Grad" class="product-image" loading="lazy"><span class="product-badge">Luxury</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
-                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Champagne Gold Lux</h3><p class="product-price">$124.99 <span class="original">$249.99</span></p></div>
+                    <div class="product-image-wrapper"><img src="images/dress-56.jpg" alt="Champagne Gold Graduation Dress" class="product-image" loading="lazy"><span class="product-badge">Luxury</span><div class="product-overlay"><span class="product-quick-view">Quick View</span></div></div>
+                    <div class="product-info"><p class="product-category">Graduation</p><h3 class="product-name">Champagne Gold Graduation Dress</h3><p class="product-price">$124.99 <span class="original">$249.99</span></p></div>
                 </a>
             </div>
         </section>
+        
     </main>
     
+    <!-- Bottom CTA Section -->
     <section class="bottom-cta">
-        <h2 class="bottom-cta-title">✨ Find Your Perfect Dress ✨</h2>
-        <p class="bottom-cta-text">Join thousands of satisfied customers. Limited stock available!</p>
+        <h2 class="bottom-cta-title">✨ Ready to Find Your Perfect Dress? ✨</h2>
+        <p class="bottom-cta-text">Join thousands of satisfied customers who found their dream dress at unbeatable prices. Limited stock available - shop now before it's gone!</p>
         <div class="bottom-cta-buttons">
-            <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="bottom-cta-btn primary" onclick="trackClick('bottom_primary')">Shop All</a>
-            <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="bottom-cta-btn secondary" onclick="trackClick('bottom_secondary')">New Arrivals</a>
+            <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="bottom-cta-btn primary" onclick="trackClick('bottom_primary')">Shop All Dresses</a>
+            <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="bottom-cta-btn secondary" onclick="trackClick('bottom_secondary')">View New Arrivals</a>
+            <a href="https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}" class="bottom-cta-btn primary" onclick="trackClick('bottom_sale')">Shop Sale Items</a>
         </div>
     </section>
     
+    <!-- Footer -->
     <footer class="footer">
         <div class="footer-links">
             <a href="#" class="footer-link">Home</a>
             <a href="#" class="footer-link">Shop</a>
-            <a href="#" class="footer-link">About</a>
+            <a href="#" class="footer-link">About Us</a>
             <a href="#" class="footer-link">Contact</a>
-            <a href="#" class="footer-link">Privacy</a>
+            <a href="#" class="footer-link">Privacy Policy</a>
         </div>
         <p>© 2026 Bae Moments Collection. All rights reserved.</p>
     </footer>
     
+    <!-- Scroll to Top Button -->
     <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">↑</div>
     
+    <!-- JavaScript -->
     <script>
-        function trackClick(id) { if (typeof gtag !== 'undefined') gtag('event', 'click', {'event_category': 'affiliate', 'event_label': id}); }
-        function scrollToTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        const AFFILIATE_URL = 'https://myblogshop.top/r/r86t8g3M/s?utm_source=Pinterest&utm_medium={campaignid}&utm_campaign=social&utm_content={adgroupid}';
+        
+        function trackClick(elementId) {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'click', {'event_category': 'affiliate', 'event_label': elementId});
+            }
+            console.log('Click tracked:', elementId);
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Scroll effects
         window.addEventListener('scroll', function() {
             const scrollTop = document.getElementById('scrollTop');
             if (window.pageYOffset > 300) scrollTop.classList.add('visible');
             else scrollTop.classList.remove('visible');
+            
+            // Active nav highlighting
             const sections = document.querySelectorAll('.section');
             const navItems = document.querySelectorAll('.nav-item a');
             let current = '';
-            sections.forEach(section => { if (pageYOffset >= section.offsetTop - 200) current = section.getAttribute('id'); });
-            navItems.forEach(item => { item.classList.remove('active'); if (item.getAttribute('href') === '#' + current) item.classList.add('active'); });
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) current = section.getAttribute('id');
+            });
+            navItems.forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === '#' + current) item.classList.add('active');
+            });
         });
-        const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.05 });
-        document.querySelectorAll('.animate-on-scroll').forEach(section => observer.observe(section));
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(section => {
+            observer.observe(section);
+        });
     </script>
 </body>
 </html>
