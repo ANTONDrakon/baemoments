@@ -4,8 +4,15 @@ import re
 from pathlib import Path
 
 
+SIZES = "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 260px"
+
+WRAPPER_RE = re.compile(
+    r'(<div class="product-image-wrapper">)'
+    r'(?P<picture><picture class="product-picture">.*?</picture>)',
+    re.IGNORECASE | re.DOTALL,
+)
+
 IMG_RE = re.compile(
-    r'(?P<prefix><div class="product-image-wrapper">)\s*'
     r'(?P<img><img\s+[^>]*?src="images/(?P<name>dress-\d{2})\.jpg"[^>]*?>)',
     re.IGNORECASE,
 )
@@ -33,10 +40,42 @@ def _set_attr(tag: str, attr: str, value: str) -> str:
 
 
 def _wrap_img(name: str, img_tag: str) -> str:
+    images_dir = Path("images")
+
+    def build_srcset(ext: str) -> str:
+        candidates: list[tuple[int, str]] = []
+        for w in (320, 640, 960):
+            p = images_dir / f"{name}-{w}.{ext}"
+            if p.exists():
+                candidates.append((w, f"images/{name}-{w}.{ext} {w}w"))
+        # Add master as the largest option if present
+        master = images_dir / f"{name}.{ext}"
+        if master.exists():
+            # Width is not encoded; assume 1024 for our masters, but allow smaller.
+            width = 1024
+            if name in ("dress-35", "dress-37"):
+                width = 450
+            candidates.append((width, f"images/{name}.{ext} {width}w"))
+
+        candidates.sort(key=lambda x: x[0])
+        return ", ".join([c[1] for c in candidates])
+
+    # Make JPEG fallback point to a mid-size by default if available.
+    jpg_src = f"images/{name}-640.jpg"
+    if not (images_dir / f"{name}-640.jpg").exists():
+        jpg_src = f"images/{name}.jpg"
+
+    img_tag = _set_attr(img_tag, "src", jpg_src)
+    img_tag = _set_attr(img_tag, "srcset", build_srcset("jpg"))
+    img_tag = _set_attr(img_tag, "sizes", SIZES)
+
+    avif_srcset = build_srcset("avif")
+    webp_srcset = build_srcset("webp")
+
     return (
         '<picture class="product-picture">'
-        f'<source type="image/avif" srcset="images/{name}.avif">'
-        f'<source type="image/webp" srcset="images/{name}.webp">'
+        f'<source type="image/avif" srcset="{avif_srcset}" sizes="{SIZES}">'
+        f'<source type="image/webp" srcset="{webp_srcset}" sizes="{SIZES}">'
         f"{img_tag}"
         "</picture>"
     )
@@ -47,12 +86,18 @@ def update_index(index_path: Path) -> None:
 
     first = True
 
-    def repl(match: re.Match[str]) -> str:
+    def repl_picture(match: re.Match[str]) -> str:
         nonlocal first
 
-        prefix = match.group("prefix")
-        img_tag = match.group("img")
-        name = match.group("name")
+        wrapper_start = match.group(1)
+        picture_html = match.group("picture")
+
+        img_match = IMG_RE.search(picture_html)
+        if not img_match:
+            return match.group(0)
+
+        img_tag = img_match.group("img")
+        name = img_match.group("name")
 
         img_tag = _ensure_attr(img_tag, "decoding", "async")
 
@@ -65,11 +110,11 @@ def update_index(index_path: Path) -> None:
             img_tag = _set_attr(img_tag, "loading", "lazy")
             img_tag = _ensure_attr(img_tag, "fetchpriority", "low")
 
-        return prefix + _wrap_img(name, img_tag)
+        return wrapper_start + _wrap_img(name, img_tag)
 
-    new_html, count = IMG_RE.subn(repl, html)
+    new_html, count = WRAPPER_RE.subn(repl_picture, html)
     if count == 0:
-        raise SystemExit("No product images found to update.")
+        raise SystemExit("No product picture blocks found to update.")
 
     index_path.write_text(new_html, encoding="utf-8")
 
@@ -81,4 +126,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
