@@ -1,0 +1,14 @@
+/*
+  Cache-Control: public, max-age=86400, s-maxage=86400
+
+/images/*.avif
+  Cache-Control: public, max-age=604800, immutable
+
+/images/*.webp
+  Cache-Control: public, max-age=604800, immutable
+
+/images/*.jpg
+  Cache-Control: public, max-age=604800, immutable
+
+/sw.js
+  Cache-Control: public, max-age=0, must-revalidate
