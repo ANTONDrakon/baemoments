@@ -4,7 +4,8 @@ import re
 from pathlib import Path
 
 
-SIZES = "(max-width: 480px) 100vw, (max-width: 768px) 50vw, 260px"
+# Добавлен размер 160w для мобильных устройств (slow 4G)
+SIZES = "(max-width: 360px) 100vw, (max-width: 480px) 100vw, (max-width: 768px) 50vw, 260px"
 
 WRAPPER_RE = re.compile(
     r'(<div class="product-image-wrapper">)'
@@ -12,8 +13,9 @@ WRAPPER_RE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 
+# Ищем img с src="images/dress-XX.jpg" или src="images/dress-XX-640.jpg" (уже обработанные)
 IMG_RE = re.compile(
-    r'(?P<img><img\s+[^>]*?src="images/(?P<name>dress-\d{2})\.jpg"[^>]*?>)',
+    r'(?P<img><img\s+[^>]*?src="images/(?P<name>dress-\d{2})(?:-\d+)?\.jpg"[^>]*?>)',
     re.IGNORECASE,
 )
 
@@ -44,7 +46,7 @@ def _wrap_img(name: str, img_tag: str) -> str:
 
     def build_srcset(ext: str) -> str:
         candidates: list[tuple[int, str]] = []
-        for w in (320, 640, 960):
+        for w in (160, 320, 640, 960):
             p = images_dir / f"{name}-{w}.{ext}"
             if p.exists():
                 candidates.append((w, f"images/{name}-{w}.{ext} {w}w"))

@@ -1,3 +1,6 @@
 images/_test.*
 .roo/
 .roomodes
+.todo
+__pycache__/
+*.pyc
